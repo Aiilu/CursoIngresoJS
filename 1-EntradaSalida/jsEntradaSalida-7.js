@@ -39,7 +39,7 @@ function multiplicar()
     numeroDos=document.getElementById("numeroDos").value;
     numeroUno=parseInt(numeroUno);
     numeroDos=parseInt(numeroDos);
-    multiplicar=numeroUno+numeroDos;
+    multiplicar=numeroUno*numeroDos;
     alert("la multiplicacion es" + multiplicar);
     
 
@@ -50,6 +50,16 @@ function multiplicar()
 
 function dividir()
 {
+    var numeroUno;
+    var numeroDos;
+    var dividir;
+    numeroUno=document.getElementById("numeroUno").value;
+    numeroDos=document.getElementById("numeroDos").value;
+    numeroUno=parseInt(numeroUno);
+    numeroDos=parseInt(numeroDos);
+    dividir=numeroUno/numeroDos;
+    alert("la division es" + dividir);
+
 	
 }
 
