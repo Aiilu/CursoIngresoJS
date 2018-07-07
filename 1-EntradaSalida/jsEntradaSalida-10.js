@@ -5,11 +5,11 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
     var importe;
-    var porcentaje;
+    var descuento;
     var resultado;
     importe=document.getElementById("importe").value;
-    porcentaje=0.25;
-    resultado=importe-(importe*porcentaje);
+    descuento=0.25;
+    resultado=importe-(importe*descuento);
     document.getElementById("resultado").value=resultado;
 
             

@@ -9,11 +9,18 @@ function FahrenheitCentigrados ()
     fahrenheit=document.getElementById("Temperatura").value;
     fahrenheit=parseInt(fahrenheit);
     centigrados=(fahrenheit-32)/1.8;
-    alert(centigrados);
+    alert(fahrenheit+ " fahrenheit son " +centigrados+ " centigrados ");
 	
 }
 
 function CentigradosFahrenheit () 
 {
+    var centigrados;
+    var fahrenheit;
+    centigrados=document.getElementById("Temperatura").value;
+    centigrados=parseInt(centigrados);
+    fahrenheit=(centigrados+1*8)+32;
+    alert(centigrados+ " centigrados son "+fahrenheit+ " fahrenheit ");
+
 	
 }

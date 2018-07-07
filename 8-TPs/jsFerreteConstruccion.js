@@ -21,6 +21,13 @@ function Rectangulo ()
 }
 function Circulo () 
 {
+    var radio;
+    var perimetro;
+    radio=document.getElementById("Radio").value;
+    radio=parseInt(radio);
+    perimetro=(2*Math.PI)*radio;
+    resultado=perimetro*3;
+    alert(resultado);
 	
 }
 function Materiales () 
@@ -37,5 +44,5 @@ function Materiales ()
     perimetro=largo*ancho;
     cemento=perimetro*2;
     cal=perimetro*3;
-    alert("se necesita" + cal + "de cal y" + cemento +"de cemento");	
+    alert(" se necesita " + cal + " de cal y " + cemento +" de cemento ");	
 }

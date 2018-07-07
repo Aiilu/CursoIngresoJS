@@ -12,6 +12,6 @@ function SacarResto()
     divisor=document.getElementById("numeroDivisor").value;
     cociente=dividendo/divisor;
     resto=dividendo%divisor;
-    alert("el resto es" + resto);
+    alert("el resto es " + resto);
 	
 }
