@@ -9,7 +9,7 @@ function mostrar()
 
 	if( numero > 8){
 		alert("Excelente");
-	}
+	}  
 	else{}
 		if ( numero > 4){
 			alert("Aprobado");
