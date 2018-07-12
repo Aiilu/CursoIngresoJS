@@ -15,12 +15,25 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
+    numeroSecreto = Math.random ()*(101.1)+1;
+    Console.log(4);
+    contadorIntentos = 0;
+
 	
 
 }
 
 function verificar()
 {
+  var numero;
+  numero=document.getElementById("numero").value;
+  contadorIntentos= contadorIntentos+1;
+  document.getElementById("contadorIntentos").value=contadorIntentos;
+  if (numero==numeroSecreto){
+    alert ("ganaste");
+  }
+  else if (numero>4) {
+  }
 	
 	
 }

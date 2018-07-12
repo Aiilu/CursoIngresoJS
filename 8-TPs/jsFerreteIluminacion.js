@@ -10,5 +10,115 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+    var cantidad;
+    var precioDescuento;
+    var resultado;
+
+    cantidad = document.getElementById("Cantidad").value;
+    precioDescuento = (cantidad*35)*(50/100); 
+    resultado = (cantidad*35)-precioDescuento;
+    
+
+    if ( cantidad >=6 ){
+    alert (resultado);
+
+    }
+
+    else {}
+
+    var cantidad;
+    var precioDescuento;
+    var marca;
+    var resultado;
+
+    cantidad = document.getElementById("Cantidad").value;
+    marca = document.getElementById("Marca").value;
+
+    precioDescuento = (cantidad*35)*(40/100);
+    precioDescuento = (cantidad*35)-precioDescuento;
+
+    if (cantidad =5 && marca=="ArgentinaLuz"){
+    document.getElementById("precioDescuento").value = precioDescuento;
+  }
+  
+  var cantidad;
+    var precioDescuento;
+    var marca;
+
+    cantidad = document.getElementById("Cantidad").value;
+
+    precioDescuento = (cantidad*35)*(30/100);
+    precioDescuento = (cantidad*35)-precioDescuento;
+
+    if (cantidad =5){
+        document.getElementById("precioDescuento").value = precioDescuento;
+    }
+
+    else {}
+        var cantidad;
+    var precioDescuento;
+    var marca;
+    
+
+    cantidad = document.getElementById("Cantidad").value;
+    marca = document.getElementById("Marca").value;
+    precioDescuento = (cantidad*35)*(25/100);
+    precioDescuento = (cantidad*35)-precioDescuento;
+
+    if (cantidad =4 && marca=="ArgentinaLuz" || "FelipeLamparas"){
+        document.getElementById("precioDescuento").value = precioDescuento;
+  
+    }
+
+    
+     else {}
+         var cantidad;
+    var precioDescuento;
+    var marca;
+    
+
+    cantidad = document.getElementById("Cantidad").value;
+    marca = document.getElementById("Marca").value;
+
+    precioDescuento = (cantidad*35)*(15/100);
+    precioDescuento = (cantidad*35)-precioDescuento;
+
+    if (cantidad =4 && marca=="ArgentinaLuz" || "FelipeLamparas"){
+document.getElementById("precioDescuento").value = precioDescuento;
+    }
+
+     var precioTotal
+     precioTotal=document.getElementById("precioTotal").value;
+    if (precioDescuento >120){
+        precioDescuento=precioTotal*1.1;
+    }
+        
+        
+
+
+    
+
+
+    
+
+
+
+
+
+   
+
+   
+
+    
+
+
+
+
+
+    
+
+    
+
+    
  	
 }
