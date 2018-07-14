@@ -6,24 +6,33 @@ a su opción  y le informaremos si ganó, empató o perdió.
 */
 var eleccionMaquina;
 
+{ 
+
 function comenzar()
-{
+
+	var numeroRandom = Math.floor((Math.random ()*3-1)+1);
+    alert(numeroRandom);
+console.log("piedra");
+console.log("papel");
+console.log("tijera");
 	
 
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
+    alert(1);
 	
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+    alert(2);
 
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+	alert (3);
 
 }//FIN DE LA FUNCIÓN

@@ -5,8 +5,10 @@ var edad;
 
 edad = document.getElementById("edad").value;
 
-if (!edad <13 || >=18){
-alert ("usted es adolescente");
+edad = parseInt(edad);
+
+if (!(edad >= 13) && (edad <= 17)){
+alert ("usted NO es adolescente");
 }
 
 

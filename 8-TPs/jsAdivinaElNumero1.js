@@ -17,23 +17,15 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-<<<<<<< HEAD
   
     numeroSecreto = Math.floor( Math.random ()*(101-1)-1);
-+    console.log(numeroSecreto);
-=======
-    numeroSecreto = Math.random ()*(101.1)+1;
-    Console.log(4);
-    contadorIntentos = 0;
-
-	
->>>>>>> c5dff2f186eaf1f9df1d0cd74571e5e3b496b8f4
+   console.log(numeroSecreto);
 
 }
 
 function verificar()
 {
-<<<<<<< HEAD
+
   numeroUsuario = document.getElementById("numero").value;
   numeroSecreto = 7;
   contadorIntentos = contadorIntentos + 1;
@@ -52,19 +44,6 @@ function verificar()
       }
     }
   }
-
-
-=======
-  var numero;
-  numero=document.getElementById("numero").value;
-  contadorIntentos= contadorIntentos+1;
-  document.getElementById("contadorIntentos").value=contadorIntentos;
-  if (numero==numeroSecreto){
-    alert ("ganaste");
-  }
-  else if (numero>4) {
-  }
->>>>>>> c5dff2f186eaf1f9df1d0cd74571e5e3b496b8f4
 	
 	
 }
