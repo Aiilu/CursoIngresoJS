@@ -9,8 +9,6 @@ var piedra;
 var papel;
 var tijera;
 var edad;
-contadorPersonas;
-contadorPersonas=0;
 
 
 
