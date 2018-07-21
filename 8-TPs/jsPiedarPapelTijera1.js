@@ -20,15 +20,16 @@ function comenzar()
     console.log(eleccionMaquina);
   
 
-edad = prompt("Ingrese su edad");
+    edad = prompt("Ingrese su edad");
 
-if (edad>=18){
-document.getElementById("contadorPersonas").value=contadorPersonas;
-}
 
+    if (edad>=18){
+    alert("usted es mayor de edad");
+    }
+    
     if (edad<18){
-        document.getElementById("contadorPersonas").value=contadorPersonas;
-}
+        alert("usted es menor de edad");
+    }
      
     
 	
