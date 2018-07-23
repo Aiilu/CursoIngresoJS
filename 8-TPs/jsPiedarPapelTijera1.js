@@ -14,8 +14,8 @@ var edad;
 
 function comenzar()
 { 
-    eleccionMaquina = Math.floor( Math.random ()*(3-1))+1;
-    console.log(eleccionMaquina);
+    eleccionMaquina = Math.floor( Math.random ()*(4-1))+1;
+    console.log(eleccionMaquina)
   
 
     edad = prompt("Ingrese su edad");
@@ -35,21 +35,21 @@ function comenzar()
 
 }//FIN DE LA FUNCIÓN
 function piedra()
+
 {
     piedra = 1;
     console.log(piedra);
 
-    if (piedra=eleccionMaquina){
-        alert("usted empató");
+    if (piedra==eleccionMaquina){
+        alert("El que tiene Piedra empató");
     }
-
-    if (piedra>eleccionMaquina){
-        alert("Usted ganó");
+    else if (piedra>eleccionMaquina){
+        alert("El que tiene Piedra ganó");
     }
-
-    if (piedra<eleccionMaquina){
-        alert("Usted perdió");
+     else{
+        alert("El que tiene Piedra perdió");
     }
+    
 
    
 
@@ -61,40 +61,35 @@ function papel()
     papel = 2;
     console.log(papel);
 
-    if (papel=eleccionMaquina){
-        alert("Usted empató");
+    if (papel==eleccionMaquina){
+        alert("El que tiene Papel empató");
     }
-
-    if (papel>eleccionMaquina){
-        alert("Usted ganó");
+    else if (papel>eleccionMaquina){
+        alert("El que tiene Papel ganó");
+    } 
+    else {
+        alert("El que tiene Papel perdió");
     }
-
-    if (papel<eleccionMaquina){
-        alert("Usted perdió");
-    }
-  
    
     
 
 
 }//FIN DE LA FUNCIÓN
 function tijera()
-{
+{   
     tijera = 3;
     console.log(tijera);
 
-    if (tijera=eleccionMaquina){
-        alert("Usted empató");
+    if (tijera==eleccionMaquina){
+        alert("El que tiene Tijera empató");
     }
 
-    if (tijera>eleccionMaquina){
-        alert("Usted ganó");
+    else if (tijera>eleccionMaquina){
+        alert("El que tiene Tijera ganó");
+    } 
+    else {
+        alert("El que tiene Tijera perdió");
     }
-    
-    if (tijera<eleccionMaquina){
-        alert("Usted perdió");
-    }
-   
     
   
 
