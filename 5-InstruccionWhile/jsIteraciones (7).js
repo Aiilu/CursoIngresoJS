@@ -7,7 +7,7 @@ function mostrar()
 	var num;
 	var promedio;
 
-	while ( respuesta=="si" || respuesta !=="no" ){
+	while ( respuesta=="si" ){
 		//no hace falta el num, cuenta el contador
 		//while(true){
 		//cont++;
@@ -18,19 +18,15 @@ function mostrar()
 		//num=parseInt(num);//NaN
 		//while(isNaN(num))
 	    // break
-		}
-
+		num=prompt("ingrese sus números");
 		contador ++;
-		num=prompt("ingrese");
+		respuesta=prompt("desea seguir?");
 		//aca podemos abrir un if 
 		// if(rsp=="no"){
 	    // break;(salir del bucle) Continue;(saltar al otro bloque de codigo).
-		
-		respuesta=prompt("ingrese respuesta");
-
-		num=parseInt(num);
+        num=parseInt(num);
 		acumulador+=num;
-		
+	}
 	
  promedio=acumulador/contador;
 

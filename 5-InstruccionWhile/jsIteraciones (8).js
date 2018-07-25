@@ -9,11 +9,11 @@ function mostrar()
 	
 	var respuesta='si';
 
-	while (respuesta!=="no"){
+	while (respuesta=="si"){
 
 		contador++;
 
-		num=prompt("ingrese");
+		num=prompt("ingrese sus números");
 		num=parseInt(num);
 
     if (num>=0){

@@ -1,88 +1,82 @@
 function mostrar()
 {
-
-	var contadorNeg=0;
-	var contadorPosit=0;
-	var acumuladorPosit;
-	var acumuladorNeg;
 	var num;
-	var positivo=0;
-	var negativo=1;
-	var promedioPosit;
-	var promedioNeg;
+	var contPosit=0;
+	var contNeg=0;
+	var acumPosit=0;
+	var acumNeg=0;
 	var cantPosit;
-	var cantNegat;
-	var contadorCeros;
+	var cantNeg;
+	var cantCeros=0;
+	var cantPar=0;
+	var promPosit;
+	var promNeg;
 	var dif;
+	var msg;
 
 	//declarar contadores y variables 
-	
 	var respuesta="si";
 
-	while(respuesta!="no")
-	{
-		
-		num=prompt("Ingrese numero");
-		num=parseInt(numero);
+	while(respuesta=="si"){
 
-	while (isNaN(num)){
-		num=prompt("Ingrese numero");
-		num=parseInt(numero);
-		
+	num=prompt("Ingrese sus números");
+	num=parseInt(num);
+	respuesta= prompt("Quiere seguir ingresando?");
 
-		}
+	while(isNaN(num)){
+	num=prompt("Ingrese sus números");
+	num=parseInt(num);
+	respuesta= prompt("Quiere seguir ingresando?");
+	//isNan va a dar por entendido que es un num entero, si pongo un striing no va a producise el bloque
+	}
 
-		if (num<0){
-		positivo+=num;
-		negativo+num;
-		contadorNeg++;
-		contadorPosit++;
+	if(num<0){
+	acumNeg+=num;
+	contNeg ++;
 	}
 
 	else if (num>0){
-		contadorPosit++;
-		acumuladorPosit++;
-
-
+	acumPosit+=num;
+	contPosit ++;
 	}
+	
 	else {
-		contadorCeros++;
-
+	cantCeros ++;
 	}
 
-		if (num%2==1){
-			contadorCeros++;
-		}
- 
+	if (num%2==0){
+		cantPar ++;
+	}
+	}
+	
+	promNeg=acumNeg/contNeg;
+	promPosit=acumPosit/contPosit;
+
+	dif=contPosit-contNeg;
+
+	if(dif<0) {
+	msg="hay mas n° negativos por:" + (dif*-1);
+	}
+
+	else if (dif==0) {
+		msg="hay mas cantidad de ceros";
+	}
+
+	else  {
+		msg="hay mas n° positivos por:" + dif;
+	}
+
+	document.write("Suma de negativos:" + acumNeg + "<br>");
+	document.write("Suma de positivos:" + acumPosit + "<br>");
+	document.write("Cantidad de n° negativos:" + contNeg + "<br>");
+	document.write("Cantidad de n° positivos:" + contPosit + "<br>");
+	document.write("Cantidad de Ceros:" + cantCeros + "<br>");
+	document.write("Cantidad de n° pares:" + cantPar + "<br>");
+	document.write("Promedio de los n° negativos:" + promNeg + "<br>");
+	document.write("Promedio de n° positivos:" + promPosit + "<br>");
+	document.write(msg);
+	
 
 		
-	
-	}
-	promedioPosit=acumuladorPosit/contadorPosit;
-	promedioNeg=acumuladorNeg/contadorNeg;
 
-	dif=contadorPosit-contadorNeg;
-	if (dif>0){
-		msg="hay mas n positivos"+ dif;
-	}
-	else if (dif==0){
-		msg="misma cantidad";
-	}
-	else {
-		msg="hay mas negativos"+(dif*-1);
-	}
-
-
-
-	respuesta=prompt("ingrese respuesta");
-	document.write(msg);
-	document.write(promedioPosit);
-	//poner todas las variables
-	//separar con <br>
-	
-
-
-
-
-}
 }//FIN DE LA FUNCIÓN

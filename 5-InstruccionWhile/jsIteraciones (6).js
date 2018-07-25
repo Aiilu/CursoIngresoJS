@@ -1,31 +1,25 @@
 function mostrar()
 {
 
-	var contador=0;
+	var cont=0;
 	var num;
-	var suma=0;
-	var promedio;
+	var acum=0;
+	var prom;
 
-
-while (contador<5 ){
+while (cont<5){
 	//bucle 5 veces
-	contador++;
 	//sumar con parseint
-	num=prompt("ingrese");
-
-	num=parseInt(num);
+	num=prompt("ingrese sus números");
+    num=parseInt(num);
 
 	//suma=suma+num;
-	suma+=num;
-	
-
+	cont ++;
+	acum+=num;
 }
- promedio=suma/contador;
+ prom=acum/cont;
 
 
-
-
-document.getElementById('suma').value=suma;
-document.getElementById('promedio').value=suma/5;
+document.getElementById('suma').value=acum;
+document.getElementById('promedio').value=acum/5;
 
 }//FIN DE LA FUNCIÓN

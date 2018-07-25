@@ -1,8 +1,8 @@
 function mostrar()
 {
-    var maximo;
-	var minimo;
-	var contador=0;
+    var max;
+	var min;
+	var cont=0;
 	var num;
 	var bandera=true;
 	// declarar variables
@@ -13,34 +13,34 @@ function mostrar()
 	
 	var respuesta='si';
 
-	while(respuesta!='no')
+	while(respuesta=="si")
 	{
 		num=prompt("Ingrese un numero");
 		num=parseInt(num);
-		contador ++;
+		cont ++;
 
 		
 		if (bandera){
 		 bandera=false;
-		 maximo=num;
+		 max=num;
 		 min=num;
 
 	 }
 
-	 if (num>maximo){
-         maximo=num;
+	 if (num>max){
+         max=num;
 	 }
 
-	 if (num<minimo){
-		 minimo=num;
+	 if (num<min){
+		 min=num;
 	 }
 
-	 respuesta=prompt("¿Quiere seguir");
+	 respuesta=prompt("¿Quiere seguir ingresando?");
 		
 	
 	}
-document.getElementById('maximo').value=maximo;
-document.getElementById('minimo').value=minimo;
+document.getElementById('maximo').value=max;
+document.getElementById('minimo').value=min;
 
 
 
