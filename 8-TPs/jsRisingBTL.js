@@ -9,30 +9,87 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- var edad;
- var sexo;
- var est;
- var estSolt=1;
- var estCas=2;
- var estDiv=3;
- var estVi=4;
- var sueld;
- var leg;
- var nac;  
- 
- if (!(edad>=18 && edad<=90)){    
-  edad=prompt("Ingrese edad");
- }
+    var edad;
+  var sexo;
+  var estCiv;
+  var sueldBrut;
+  var leg;
+  var nacion;
 
- if (sexo=="M" && sexo=="F"){
-  sexo=prompt("Ingrese sexo");
- }
+  edad=parseInt(edad);
+
+    edad=prompt("Ingrese su edad");
+
+  while (edad<18 || edad>90 ) {
+    edad=prompt("Ingrese nuevamente su edad");
+}
+ document.getElementById("Edad").value=edad; //A
+   
+       sexo=prompt("Ingrese su sexo. F para femenino o M para masculino");
+
+   while (!(sexo=="M" || sexo=="F")) {
+       sexo=prompt("Sexo no identificado");
+   }
+   document.getElementById("Sexo").value=sexo; //B
+
+        estCiv=prompt("Ingrese su Estado Civil. 1 para soltero/2 para casado/3 para divorciados/4 para viudos");
+  
+    switch(estCiv) {
+       case "1":
+       document.getElementById("EstadoCivil").value="Soltero";
+       break;
+       
+       case "2":
+       document.getElementById("EstadoCivil").value="Casado";
+       break;
+
+       case "3":
+       document.getElementById("EstadoCivil").value="Divorciado";
+       break;
+
+       case "4":
+       document.getElementById("EstadoCivil").value="Viudo";
+       break;
+
+       default:
+          estCiv=prompt("Ingrese un estado valido");
+   }
+    document.getElementById("EstadoCivil").value=estCiv; //C
+
+       sueldBrut=prompt("Ingrese su sueldo");
+       sueldBrut=parseInt(sueldBrut);
+
+    while (sueldBrut<1800) {
+           sueldBrut=prompt("El salario no es correcto");
+    }
+    document.getElementById("Sueldo").value=sueldBrut; //D
  
- 
- document.getElementById("Edad").value=edad;
- document.getElementById("Sexo").value=sexo;
- document.getElementById("EstadoCivil").value=est;
- document.getElementById("Sueldo").value=sueld;
- document.getElementById("Legajo").value=leg;
- document.getElementById("Nacionalidad").value=nac;
+        leg=prompt("Número de legajo, numérico de 4 cifras, sin ceros a la izquierda");
+
+    while (leg<1000  || leg>9999) {
+          leg=prompt("Ingrese su legajo nuevamente");
+    }
+    document.getElementById("Legajo").value=leg; //E
+
+    switch(nacion) {
+        case "A":
+        document.getElementById("Nacionalidad").value="Argentino";
+        break;
+
+        case "E":
+        document.getElementById("Nacionalidad").value="Extranjeros";
+        break;
+
+        case "N":
+        document.getElementById("Nacionalidad").value="Nacionalizados";
+        break;
+
+        default:
+              nacion=prompt("Ingrese una nacionalidad correcta");
+            
+    }
+    document.getElementById("Nacionalidad").value=nacion; //F
+
+
+
 }
