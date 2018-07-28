@@ -1,14 +1,19 @@
 function mostrar()
 {
-    var prec;
-    var desc;
-    var precTot;
+    var precio;
+    var porcentajeDescuento;
+    var descuentoEnDinero;
+    var iva;
+    var precioFinal;
 
-    prec=parseInt(prompt("Ingrese precio"));
-    desc=parseInt(prompt("Ingrese porcentaje de descuento"));
+    precio=prompt("ingrese el precio");
+    porcentajeDescuento=prompt("ingrese el porcentaje");
+    precio=parseInt(precio);
+    porcentajeDescuent=parseInt(porcentajeDescuento);
 
-    precTot=prec*(desc/100);
-
-    document.getElementById("elPrecioFinal").value=precTot;
-
+    descuentoEnDinero=precio*descuentoEnDinero/100;
+    iva=precio*21/100;
+    precioConDescuento=precio-descuentoEnDinero;
+    precioFinal=(precio-porcentajeDescuento)+iva;
+    document.getElementById("elPrecioFinal").value=precioFinal;
 }
