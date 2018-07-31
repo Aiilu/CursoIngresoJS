@@ -1,8 +1,8 @@
 function mostrar()
 {
-    for(cont=10;cont>=0;cont --){
-        alert(cont);
-    }
+   for (cont=10;cont>=0;cont --) {
+       console.log(cont);
+   }
 
 
 }
