@@ -1,13 +1,16 @@
 function mostrar()
 {
-
-for (cont=0; ; cont++){
-    if (numero==10){
-    break;
-
-    }
- }
-    alert("Usted ha salido del bucle");
+    for( i=0;   ;i++)
+    {
+        if(i=10000) {
+            console.log(i);
+        }
+        
+        break;
+        
+            alert("Break con exito");
+        }
+    
 
 
 

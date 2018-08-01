@@ -1,12 +1,10 @@
 function mostrar()
-{ contador=prompt("ingrese");
-    for (contador=9;contador ++){
-        break;
-        
-    }
-    alert("bien");
+{ 
+  num = prompt ("Ingrese un numero");
 
-
+  for ( ; num !=9 ;) {
+       num = prompt ("Ingrese nuevamente");
+  }
 
 
 }//FIN DE LA FUNCIÓN
