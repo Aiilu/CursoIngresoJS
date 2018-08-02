@@ -6,114 +6,66 @@ function mostrar()
 //Fer F 81
 
 var cont=0;
-var nomb;
+var nota;
 var sexo;
-var sexoViej;
-var edad;
-var nombViej;
-var nombJov;
-var mujerVieja;
-var cantMuj=0;
-var cantHomb=0;
-var cantMenEdad=0;
-var cantMayEdad=0;
-var cantHombMayEdad=0;
-var flag=true;
-var max=0
-var min=0
-var acumHob=0;
-var acumMuj=0;
+var promTotal;
 var acumTotal=0;
-var promedioMujeres;
-var promedioHombres;
-var promedioTotal;
+var flag=true;
+var max;
+var min;
+var masBajo;
+var contVarones=0;
 
-while (cont<4)
- {
-     cont ++;
 
-     nomb = prompt ("Ingrese su nombre");
-     
-     sexo = prompt ("Ingrese su sexo");
-     sexo = sexo.toUpperCase();
+while (cont<5)
+{
+  cont ++;
 
-     while (sexo!=="M" && sexo!=="F")
-      {
-          sexo = prompt ("Ingrese su sexo. F o M");
-      }
+  nota = prompt ("Ingrese una nota");
+  nota = parseInt (nota);
+  acumTotal+=nota;
 
-     edad = prompt ("Ingrese su edad");
-     edad = parseInt (edad);
+  while ( nota<0 || nota>10 || isNaN(nota)) 
+{
+    nota = prompt ("Ingrese la nota nuevamente");
+    nota = parseInt (nota);
 
-     while (edad <0 || edad >100 || isNaN(edad))
-      {
-          edad = prompt ("Ingrese nuevamente su edad");
-          edad = parseInt (edad);                          //verificacion
-      }
-      
-     if (sexo=="F") {
-         cantMuj ++; 
-         acumMuj+=edad; //1
+}
+
+    sexo = prompt ("Ingrese un sexo. F para femenino y M para masculino");
+    sexo = sexo.toUpperCase();
+
+    while (sexo !=="F" && sexo !=="M")
+    {
+        sexo = prompt ("Ingrese F o M");                            //VALIDACION
+    }
+
+     if (flag){
+         flag = false;
+        max  = nota;
+        min = nota;
+        masBajo = sexo;
+
+   }
+
+     if (nota>max){
+         max = nota;
+         if (sexo=="M" || nota>=6){
+             contVarones ++;
+         }
      }
-      else  {
-          cantHomb ++;
-          acumHob+=edad;
-          if (edad>18) {
-              cantHombMayEdad ++;
-          }                       //2,4.1
-      }
 
-      if (edad>18) {
-          cantMayEdad ++;      //3
-      }
-      else  {
-          cantMenEdad ++;      //4
-      }
+     if (nota<min){
+         min = nota;
+         masBajo = sexo;       //b
+     }
 
-      if (flag) {
-          flag = false;
-          max = edad;
-          min = edad;
-      }
+}
 
-      if (edad>max) {
-          max = edad; 
-          nombViej = nomb;
-          sexoViej = sexo; 
-          mujerVieja = nomb;  //6,10,12,13
-      }
-
-      if (edad<min) {
-          min = edad; 
-          nombJov = nomb;    //5,11
-      }
- }
-
- acumTotal = acumMuj+acumHob;
-
- promedioMujeres = acumMuj/cantMuj;   //7
- promedioHombres = acumHob/cantHomb;  //8
- promedioTotal = acumTotal/cont;      //9
-
-
-
- document.write("Cantidad de Mujeres:" + cantMuj + "<br>");
- document.write("Cantidad de Hombres:" + cantHomb + "<br>");
- document.write("Cantidad Mayores de Edad:" + cantMayEdad + "<br>");
- document.write("Cantidad Menores de Edad:" + cantMenEdad + "<br>");
- document.write("Cantidad de Hombres mayores de Edad:" + cantHombMayEdad + "<br>");
- document.write("La edad mas Baja:" + min + "<br>");
- document.write("La edad mas Alta:" + max + "<br>");
- document.write("Promedio de edad Mujeres:" + promedioMujeres + "<br>");
- document.write("Promedio de edad Hombres:" + promedioHombres + "<br>");
- document.write("Promedio de edad total:" + promedioTotal + "<br>");
- document.write("Nombre del mas Viejo:" + nombViej + "<br>");
- document.write("Nombre del mas Joven:" + nombJov + "<br>");
- document.write("Sexo del mas Viejo:" + sexoViej + "<br>");
- document.write("Nombre de la Mujer mas vieja:" + mujerVieja + "<br>");
-
-
-
+promTotal = acumTotal/cont;
+alert("Hay tantos chicos aprobados:" + contVarones);
+alert("La nota minima es:" + min + "y el sexo es:" + masBajo);
+alert("El promedio total es:" + promTotal);                                                   
 }
 
 
