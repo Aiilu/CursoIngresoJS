@@ -59,6 +59,8 @@ function mostrar()
             flag = false;
             max = num;
             min = num;
+            letraMax = letra;
+            letraMin = letra;
         }
         
         if (num>max){
